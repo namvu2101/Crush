@@ -33,12 +33,14 @@ function firstQuestion() {
         title: CONFIG.introTitle,
         text: CONFIG.introDesc,
         imageUrl: 'img/logi.gif',
-        imageWidth: 300,
-        imageHeight: 300,
-        background: '#fff url("img/iput-bg.jpg")',
-        imageAlt: 'Custom image',
+        imageWidth: 200,
+        imageHeight: 200,
+        background: '#fff url("img/anhHa1.jpg") no-repeat center center',
+        backgroundSize: 'cover',  // Ensures the background image covers the entire area
         confirmButtonText: CONFIG.btnIntro
     }).then(function() {
+        var audio = new Audio('sound/soundBG.mp3');
+        audio.play()
         $('.content').show(200);
     })
 }
@@ -113,7 +115,7 @@ $('#yes').click(function() {
         html: true,
         width: 900,
         padding: '3em',
-        html: "<input type='text' class='form-control' id='txtReason' onmousemove=textGenerate()  placeholder='Whyyy'>",
+        html: "<input type='text' class='form-control' id='txtReason' onmousemove=textGenerate()  placeholder='Nhập những lời iu thương ở đây nha'>",
         background: '#fff url("img/iput-bg.jpg")',
         backdrop: `
               rgba(0,0,123,0.4)
