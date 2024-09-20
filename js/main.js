@@ -1,4 +1,5 @@
 $(document).ready(function() {
+    loadSound();
     // process bar
     setTimeout(function() {
         firstQuestion();
@@ -9,7 +10,10 @@ $(document).ready(function() {
         });
     }, 600);
 })
-
+function loadSound() {
+            var audio = new Audio('sound/soundBG.mp3');
+            audio.play();
+        }
 function init() {
     document.getElementById('titleWeb').innerHTML = CONFIG.titleWeb
     $('#title').text(CONFIG.title)
