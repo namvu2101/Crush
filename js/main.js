@@ -1,5 +1,4 @@
 $(document).ready(function() {
-    loadSound();
     // process bar
     setTimeout(function() {
         firstQuestion();
@@ -10,10 +9,6 @@ $(document).ready(function() {
         });
     }, 600);
 })
-function loadSound() {
-            var audio = new Audio('sound/soundBG.mp3');
-            audio.play();
-        }
 function init() {
     document.getElementById('titleWeb').innerHTML = CONFIG.titleWeb
     $('#title').text(CONFIG.title)
@@ -43,8 +38,8 @@ function firstQuestion() {
         backgroundSize: 'cover',  // Ensures the background image covers the entire area
         confirmButtonText: CONFIG.btnIntro
     }).then(function() {
-        // var audio = new Audio('sound/soundBG.mp3');
-        // audio.play()
+        var audio = new Audio('sound/soundBG.mp3');
+        audio.play()
         $('.content').show(200);
     })
 }
