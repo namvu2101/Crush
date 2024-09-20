@@ -39,8 +39,8 @@ function firstQuestion() {
         backgroundSize: 'cover',  // Ensures the background image covers the entire area
         confirmButtonText: CONFIG.btnIntro
     }).then(function() {
-        var audio = new Audio('sound/soundBG.mp3');
-        audio.play()
+        // var audio = new Audio('sound/soundBG.mp3');
+        // audio.play()
         $('.content').show(200);
     })
 }
